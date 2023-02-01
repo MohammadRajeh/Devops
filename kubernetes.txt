@@ -1,0 +1,125 @@
+Installing Kubernetes Components:
+
+   - Kubectl
+   - Minikube 
+
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+
+curl -LO "htpps://dl.k8s.io/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl.sha256"
+
+echo "$(cat kubectl.sha256) kubectl" | sha256sum --check
+
+ sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+
+chmod +x kubectl 
+
+mkdir -p ~/.local/bin
+
+mv ./kubectl  ~/.local/bin/kubectl
+
+======================================================
+Install Minikube Linux x86-64 
+-------------------------------------------------------
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+sudo install minikube-linux-amd64 /usr/local/bin/minikube
+
+minikube start
+kubectl create deployment
+
+kubectl run nginx --image=nginx
+
+
+
+
+
+
+sudo groupadd docker
+    2  sudo usermod -aG docker $USER
+    3  docker container ls
+    4  cd Desktop
+    5  mkdir testimage
+    6  cd testimage/
+    7  kubectl get service
+    8  minikube stop
+    9  kubectl set d
+   10  kubectl get service
+   11  minikube start
+   12  kubectl get service
+   13  docker container ls
+   14  minikube dashboard --url
+   15  minikube addons list
+   16  clear
+   17  minikube addons enable ambassador
+   18  minikube addons disable  ambassador
+   19  minikube addons list
+   20  clear
+   21  kubectl create deployment hello-minikube1 --image=kicbase/echo-server:1.0
+   22  kubectl get pods
+   23  kubectl get service
+   24  kubectl get --all
+   25  kubectl get -all
+   26  kubectl get --help
+   27  kubectl get 
+   28  kubectl get repl
+   29  kubectl get replicaset
+   30  kubectl get pods
+   31  kubectl scale --replicsa=6 hello-minikube1
+   32  kubectl scale --replicas=6 hello-minikube1
+   33  kubectl scale --replicas=6 hello-minikube1-56fcc4f8df-nrv5z
+   34  kubectl get deployments
+   35  kubectl scale --replicas=6 deployment/hello-minikube1
+   36  kubectl get replicaset
+   37  kubectl get pods
+   38  kubectl get pods 54kzp
+   39  kubectl get pod hello-minikube1-56fcc4f8df-54kzp
+   40  kubectl get pod 54kzp
+   41  kubectl get pod hello-minikube1-56fcc4f8df-54kzp
+   42  kubectl discribe pods
+   43  kubectl discribe pod hello-minikube1-56fcc4f8df-54kzp
+   44  kubectl describe pod hello-minikube1-56fcc4f8df-54kzp
+   45  clear
+   46  kubectl describe pod hello-minikube1-56fcc4f8df-54kzp
+   47  kubectl describe deployment hello-minikube1
+   48  kubectl describe replicaset hello-minikube1-56fcc4f8df
+   49  kubectl get pod
+   50  kubectl run nginx --image=nginx
+   51  docker images
+   52  kubectl run redisx --image=redis
+   53  kubectl run hellocoderz --image=helloincoderz
+   54  clear
+   55  kubectl get pods
+   56  kubectl get deployment
+   57  kubectl scale --replicas=5 nginx
+   58  kubectl create deployment  redis --image=redis
+   59  kubectl get deployment
+   60  kubectl scale --replicas=5 redis
+   61  kubectl scale --replicas=5 deployment/redis
+   62  kubectl scale --replicas=5 pod/nginx
+   63  kubectl scale --replicas=5 pods/nginx
+kubectl get pods
+   68  kubectl get pod redis-6c46ff6454-5cfzp -o json
+   70  kubectl get pod redis-6c46ff6454-5cfzp -o yaml
+   72  kubectl get svc
+   73  kubectl get service
+   74  kubectl get pod
+   75  kubectl get pods
+   76  kubectl get deploymet
+   77  kubectl get deployment
+   78  kubectl get deployment.apps
+   79  history
+docker pull nuvious/webwatcher:3.0.1
+
+kubectl label pods webserver dept=operate
+
+
+
+
+
+
+
+
+
+
+
+
+
